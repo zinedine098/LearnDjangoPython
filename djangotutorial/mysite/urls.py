@@ -23,4 +23,6 @@ urlpatterns = [
     path("polls/", include("polls.urls")),
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
+    path('products/', views.Products, name='products'),
+    path('custumer/', views.Custumer, name='custumer'),
 ]
