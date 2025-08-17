@@ -2,6 +2,75 @@
 
 {% block content %}
 
-<h1> {{ title }} </h1>
+<!-- Main Content -->
+  <div class="main-content p-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2>Data Pelanggan</h2>
+      <button class="btn btn-primary">+ Tambah Pelanggan</button>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="input-group mb-4">
+      <input type="text" class="form-control" placeholder="Cari pelanggan..." />
+      <button class="btn btn-outline-secondary" type="button">Cari</button>
+    </div>
+
+    <!-- Customers Table -->
+    <div class="card">
+      <div class="card-header bg-secondary text-white">
+        Tabel Pelanggan
+      </div>
+      <div class="card-body p-0">
+        <table class="table table-hover mb-0">
+          <thead class="table-light">
+            <tr>
+              <th>#</th>
+              <th>Nama</th>
+              <th>Email</th>
+              <th>Nomor HP</th>
+              <th>Status</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>001</td>
+              <td>Ani Setiawati</td>
+              <td>ani@email.com</td>
+              <td>081234567890</td>
+              <td><span class="badge bg-success">Aktif</span></td>
+              <td>
+                <button class="btn btn-sm btn-info text-white">Detail</button>
+                <button class="btn btn-sm btn-danger">Hapus</button>
+              </td>
+            </tr>
+            <tr>
+              <td>002</td>
+              <td>Budi Hartono</td>
+              <td>budi@email.com</td>
+              <td>082112345678</td>
+              <td><span class="badge bg-warning text-dark">Belum Verifikasi</span></td>
+              <td>
+                <button class="btn btn-sm btn-info text-white">Detail</button>
+                <button class="btn btn-sm btn-danger">Hapus</button>
+              </td>
+            </tr>
+            <tr>
+              <td>003</td>
+              <td>Citra Dewi</td>
+              <td>citra@email.com</td>
+              <td>089876543210</td>
+              <td><span class="badge bg-danger">Nonaktif</span></td>
+              <td>
+                <button class="btn btn-sm btn-info text-white">Detail</button>
+                <button class="btn btn-sm btn-danger">Hapus</button>
+              </td>
+            </tr>
+            <!-- Tambahkan baris pelanggan lainnya sesuai kebutuhan -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 
 {% endblock content %}

@@ -2,6 +2,79 @@
 
 {% block content %}
 
-<h1> {{ title }} </h1>
+<!-- Main Content -->
+  <div class="main-content p-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2>Daftar Produk</h2>
+      <button class="btn btn-primary">+ Tambah Produk</button>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="input-group mb-4">
+      <input type="text" class="form-control" placeholder="Cari produk..." />
+      <button class="btn btn-outline-secondary" type="button">Cari</button>
+    </div>
+
+    <!-- Produk Table -->
+    <div class="card">
+      <div class="card-header bg-secondary text-white">
+        Tabel Produk
+      </div>
+      <div class="card-body p-0">
+        <table class="table table-hover mb-0">
+          <thead class="table-light">
+            <tr>
+              <th>#</th>
+              <th>Nama Produk</th>
+              <th>Kategori</th>
+              <th>Harga</th>
+              <th>Stok</th>
+              <th>Status</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>001</td>
+              <td>Sepatu Sneakers Pria</td>
+              <td>Fashion</td>
+              <td>Rp 350.000</td>
+              <td>25</td>
+              <td><span class="badge bg-success">Aktif</span></td>
+              <td>
+                <button class="btn btn-sm btn-warning">Edit</button>
+                <button class="btn btn-sm btn-danger">Hapus</button>
+              </td>
+            </tr>
+            <tr>
+              <td>002</td>
+              <td>Jam Tangan Digital</td>
+              <td>Aksesoris</td>
+              <td>Rp 200.000</td>
+              <td>50</td>
+              <td><span class="badge bg-success">Aktif</span></td>
+              <td>
+                <button class="btn btn-sm btn-warning">Edit</button>
+                <button class="btn btn-sm btn-danger">Hapus</button>
+              </td>
+            </tr>
+            <tr>
+              <td>003</td>
+              <td>Headset Bluetooth</td>
+              <td>Elektronik</td>
+              <td>Rp 150.000</td>
+              <td>0</td>
+              <td><span class="badge bg-danger">Stok Habis</span></td>
+              <td>
+                <button class="btn btn-sm btn-warning">Edit</button>
+                <button class="btn btn-sm btn-danger">Hapus</button>
+              </td>
+            </tr>
+            <!-- Tambahkan baris lainnya sesuai kebutuhan -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 
 {% endblock content %}

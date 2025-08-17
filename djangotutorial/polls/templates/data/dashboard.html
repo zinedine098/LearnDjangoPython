@@ -1,1 +1,78 @@
-<h1>{{ title }}</h1>
+<!-- Main Content -->
+  <div class="main-content p-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2>Dashboard</h2>
+      <button class="btn btn-primary">Tambah Produk</button>
+    </div>
+
+    <!-- Statistik -->
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card text-bg-primary">
+          <div class="card-body">
+            <h5 class="card-title">Jumlah Produk</h5>
+            <p class="card-text fs-4">120</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-bg-success">
+          <div class="card-body">
+            <h5 class="card-title">Total Penjualan</h5>
+            <p class="card-text fs-4">Rp 85.000.000</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-bg-warning">
+          <div class="card-body">
+            <h5 class="card-title">Pelanggan Aktif</h5>
+            <p class="card-text fs-4">1.250</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabel Ringkasan Pesanan -->
+    <div class="card mt-4">
+      <div class="card-header bg-secondary text-white">
+        Ringkasan Pesanan Terbaru
+      </div>
+      <div class="card-body p-0">
+        <table class="table mb-0">
+          <thead class="table-light">
+            <tr>
+              <th>#</th>
+              <th>Nama Pelanggan</th>
+              <th>Produk</th>
+              <th>Status</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>001</td>
+              <td>Ani</td>
+              <td>Sepatu Sneakers</td>
+              <td><span class="badge bg-success">Selesai</span></td>
+              <td>Rp 350.000</td>
+            </tr>
+            <tr>
+              <td>002</td>
+              <td>Budi</td>
+              <td>Kaos Polos</td>
+              <td><span class="badge bg-warning text-dark">Diproses</span></td>
+              <td>Rp 120.000</td>
+            </tr>
+            <tr>
+              <td>003</td>
+              <td>Citra</td>
+              <td>Tas Kulit</td>
+              <td><span class="badge bg-danger">Dibatalkan</span></td>
+              <td>Rp 700.000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
