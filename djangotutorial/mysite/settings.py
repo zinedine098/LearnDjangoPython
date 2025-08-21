@@ -121,3 +121,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Folder static saat development
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+
+# Folder static hasil collectstatic (untuk production)
+STATIC_ROOT = BASE_DIR / "staticfiles"

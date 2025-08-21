@@ -2,75 +2,119 @@
 
 {% block content %}
 
-<!-- Main Content -->
-  <div class="main-content p-4">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-      <h2>Data Pelanggan</h2>
-      <button class="btn btn-primary">+ Tambah Pelanggan</button>
-    </div>
-
-    <!-- Search Bar -->
-    <div class="input-group mb-4">
-      <input type="text" class="form-control" placeholder="Cari pelanggan..." />
-      <button class="btn btn-outline-secondary" type="button">Cari</button>
-    </div>
-
-    <!-- Customers Table -->
-    <div class="card">
-      <div class="card-header bg-secondary text-white">
-        Tabel Pelanggan
+<!-- Content -->
+  <main class="col-md-10 ms-sm-auto col-lg-10 px-md-4 content">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Pelanggan</h2>
+        <button class="btn btn-primary"><i class="bi bi-person-plus"></i> Tambah Pelanggan</button>
       </div>
-      <div class="card-body p-0">
-        <table class="table table-hover mb-0">
-          <thead class="table-light">
-            <tr>
-              <th>#</th>
-              <th>Nama</th>
-              <th>Email</th>
-              <th>Nomor HP</th>
-              <th>Status</th>
-              <th>Aksi</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>001</td>
-              <td>Ani Setiawati</td>
-              <td>ani@email.com</td>
-              <td>081234567890</td>
-              <td><span class="badge bg-success">Aktif</span></td>
-              <td>
-                <button class="btn btn-sm btn-info text-white">Detail</button>
-                <button class="btn btn-sm btn-danger">Hapus</button>
-              </td>
-            </tr>
-            <tr>
-              <td>002</td>
-              <td>Budi Hartono</td>
-              <td>budi@email.com</td>
-              <td>082112345678</td>
-              <td><span class="badge bg-warning text-dark">Belum Verifikasi</span></td>
-              <td>
-                <button class="btn btn-sm btn-info text-white">Detail</button>
-                <button class="btn btn-sm btn-danger">Hapus</button>
-              </td>
-            </tr>
-            <tr>
-              <td>003</td>
-              <td>Citra Dewi</td>
-              <td>citra@email.com</td>
-              <td>089876543210</td>
-              <td><span class="badge bg-danger">Nonaktif</span></td>
-              <td>
-                <button class="btn btn-sm btn-info text-white">Detail</button>
-                <button class="btn btn-sm btn-danger">Hapus</button>
-              </td>
-            </tr>
-            <!-- Tambahkan baris pelanggan lainnya sesuai kebutuhan -->
-          </tbody>
-        </table>
+
+      <!-- Tabel Pelanggan -->
+      <div class="card shadow-sm mb-4">
+        <div class="card-header">
+          <h5>Daftar Pelanggan</h5>
+        </div>
+        <div class="card-body">
+          <table class="table table-striped align-middle">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Nama</th>
+                <th>Email</th>
+                <th>Telepon</th>
+                <th>Total Pesanan</th>
+                <th>Status</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>001</td>
+                <td>Ahmad Fauzi</td>
+                <td>ahmad@example.com</td>
+                <td>0812-3456-7890</td>
+                <td>12</td>
+                <td><span class="badge bg-success">Aktif</span></td>
+                <td>
+                  <button class="btn btn-sm btn-info"><i class="bi bi-eye"></i></button>
+                  <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>002</td>
+                <td>Budi Santoso</td>
+                <td>budi@example.com</td>
+                <td>0813-2222-3333</td>
+                <td>8</td>
+                <td><span class="badge bg-warning">Menunggu</span></td>
+                <td>
+                  <button class="btn btn-sm btn-info"><i class="bi bi-eye"></i></button>
+                  <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>003</td>
+                <td>Citra Dewi</td>
+                <td>citra@example.com</td>
+                <td>0812-8888-7777</td>
+                <td>20</td>
+                <td><span class="badge bg-success">Aktif</span></td>
+                <td>
+                  <button class="btn btn-sm btn-info"><i class="bi bi-eye"></i></button>
+                  <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-    </div>
-  </div>
+
+      <!-- Card Pelanggan -->
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title"><i class="bi bi-person-circle"></i> Ahmad Fauzi</h5>
+              <p class="card-text">ahmad@example.com<br>0812-3456-7890</p>
+              <span class="badge bg-success">Aktif</span>
+              <div class="mt-2">
+                <button class="btn btn-sm btn-info"><i class="bi bi-eye"></i> Detail</button>
+                <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i> Hapus</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title"><i class="bi bi-person-circle"></i> Budi Santoso</h5>
+              <p class="card-text">budi@example.com<br>0813-2222-3333</p>
+              <span class="badge bg-warning">Menunggu</span>
+              <div class="mt-2">
+                <button class="btn btn-sm btn-info"><i class="bi bi-eye"></i> Detail</button>
+                <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i> Hapus</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title"><i class="bi bi-person-circle"></i> Citra Dewi</h5>
+              <p class="card-text">citra@example.com<br>0812-8888-7777</p>
+              <span class="badge bg-success">Aktif</span>
+              <div class="mt-2">
+                <button class="btn btn-sm btn-info"><i class="bi bi-eye"></i> Detail</button>
+                <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i> Hapus</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+</div>
 
 {% endblock content %}
