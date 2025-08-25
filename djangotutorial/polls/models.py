@@ -1,12 +1,18 @@
 from django.db import models
 
-# Create your models here.
-class Question(models.Model):
-    question_text = models.CharField(max_length=200)
-    pub_date = models.DateTimeField("date published")
+class Pelanggan(models.Model): 
+    STATUS_CHOICES = [
+        ('aktif', 'Aktif'),
+        ('menunggu', 'Menunggu'),
+        ('nonaktif', 'Nonaktif'),
+    ]
 
+    kode = models.CharField(max_length=10, unique=True)
+    nama = models.CharField(max_length=100)
+    email = models.EmailField(unique=True)
+    telepon = models.CharField(max_length=20, blank=True, null=True)
+    total_pesanan = models.PositiveIntegerField(default=0)
+    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='menunggu')
 
-class Choice(models.Model):
-    question = models.ForeignKey(Question, on_delete=models.CASCADE)
-    choice_text = models.CharField(max_length=200)
-    votes = models.IntegerField(default=0)
+    def __str__(self):
+        return f"{self.nama} ({self.kode})"
